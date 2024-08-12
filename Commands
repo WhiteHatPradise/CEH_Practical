@@ -36,6 +36,9 @@ LinEnum
 https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh
 https://github.com/rebootuser/LinEnum
 
+LinPEAS
+https://github.com/peass-ng/PEASS-ng
+
 WPScan
 wpscan -h
 wpscan --url http://10.10.14.187/ --enumerate u
