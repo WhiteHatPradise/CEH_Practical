@@ -5,6 +5,7 @@ nmap -sn IP/24
 
 NMAP
 
+
 ##01 Domain
 nmap -p389 -sV IP/24
 sudo nmap -p 389,445 --open -oG - [host]/CIDR | grep open
