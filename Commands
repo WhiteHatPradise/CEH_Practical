@@ -23,8 +23,18 @@ Ist verlinkt zu Datei greetings mit starken Rechten
 cp /bin/bash greetings
 ./welcome 
 
+Priv Escalation Server
+cd /var/www/html
+cat comments
+grep -nr ""db_user"
+cat local/config/database.inc.php
+> db_password
+probieren als root password
 
-
+Priv Esalation
+LinEnum
+https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh
+https://github.com/rebootuser/LinEnum
 
 WPScan
 wpscan -h
