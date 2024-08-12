@@ -121,6 +121,46 @@ open terminal run
 browser you get meterpreter session
 type ls an get the files
 
+#015 SQL Injection 
+go on Blog page
+copy url with parameter id
+use jsql injection tool in parrot os
+paste url and click attack you get all database
+search the flag database
+
+#016 MD5 Hash
+open URL and login with Creds
+go to http://172.20.0.16/DVWA/hackable/uploads
+copy hash
+got to https://hashes.com/en/decrypt/hash
+or hash-indentifier to see typ of hash, then hashcat -h| grep MD5
+hashcat -m 0 hash.txt /Desktop/wordlist/user.txt
+
+#017 IoT
+open file with wireshark
+Filter MQTT and find length of packet in the lower pane
+see punlic message and then go to down panel open and see the message
+
+#018 Wireless
+aircrack-ng '/home/wireless.cap'
+aircrack-ng -b 6c:24:a6:3e:01:59 -w '/home/wifipass.txt' '/home/wireless.cap'
+now you see the password 
+
+#019 RAT
+nmap -p 9871,6703, 192.168.0.0/24
+start run client.exe
+insert ip and open port
+click connect go to file explorer and search *.txt
+or use search file in cmd using dir /b/s "*.txt"
+
+#020 VeraCrypt
+Use VeraCrypt to decrypt the Volunme
+Chack password is in one system and file is in one system
+decrypt the hash using hash.com and get password
+open veracrypt and upload the file and give password in and open it 
+
+
+
 
 
 
