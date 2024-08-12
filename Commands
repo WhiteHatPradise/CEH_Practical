@@ -39,6 +39,7 @@ https://github.com/rebootuser/LinEnum
 LinPEAS
 https://github.com/peass-ng/PEASS-ng
 
+https://github.com/AK0M01/Ceh-Practical
 login with RDP
 terminal
 mkdir /tmp/pwnkit
@@ -49,6 +50,7 @@ cd CVE-2021-4034/
 make
 ./CVE-2021-4034
 
+https://github.com/CyberHackPr/CEH_PRACTICAL
 Priviledge Escalation Misconfigured nfs shares Victim machine log in to target or ssh into it
 
 Sudo apt-get update
