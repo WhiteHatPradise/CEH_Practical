@@ -7,7 +7,11 @@ HashMyFiles --> mehrere Hashes zeitgleich anzeigen lassen, Dateien über den Has
 CryptoForge --> zum entschlüsseln benötigt es ein Password, verschlüsslung legt sich drüber, mit dem Password geöffnet verschwindet der Status
 BCTextEncoder --> zum entschlüsseln benötigt es ein Password udn Text muss ins Encoded Fenster, 
 Sieht verschlüsselt aus wie SSH Key mit ---Beginn--- und ---End--- Steht aber auch im Text, das es mit BCTextEncoder erstellt wurde
-
+Cryptool --> verschlüsselte Datei liegt wahscheinlich als *.hex vor
+Da es als Hex vorliegt muss es über Analysis, Systemetric Encryption entschlüsslet werden (z.B. RC4)
+Es benötigt zusätzlich die Key Length , Start
+VeraCrypt --> Laufwerk auswählen, Mount, Datei auswählen, Passwort wird benötigt 
+Das Passwort bestimmt ob ich in den inneren oder äußeren Container komme
 
 
 Wireshark
