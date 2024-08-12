@@ -4,7 +4,7 @@ netdiscover -i IP
 nmap -sn IP/24
 
 NMAP
-
+![Nmap_Commands](https://github.com/user-attachments/assets/5264bbc7-300c-4c07-9597-0e472a436093)
 
 ##01 Domain
 nmap -p389 -sV IP/24
