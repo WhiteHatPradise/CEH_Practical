@@ -5,7 +5,8 @@ nmap -sn IP/24
 
 HashMyFiles --> mehrere Hashes zeitgleich anzeigen lassen, Dateien über den Hash vergleichen lassen
 CryptoForge --> zum entschlüsseln benötigt es ein Password, verschlüsslung legt sich drüber, mit dem Password geöffnet verschwindet der Status
-BCTextEncoder --> zum entschlüsseln benötigt es ein Password, Sieht verschlüsselt aus wie SSH Key mit ---Beginn--- und ---End--- Steht aber auch im Text, das es mit BCTextEncoder erstellt wurde
+BCTextEncoder --> zum entschlüsseln benötigt es ein Password udn Text muss ins Encoded Fenster, 
+Sieht verschlüsselt aus wie SSH Key mit ---Beginn--- und ---End--- Steht aber auch im Text, das es mit BCTextEncoder erstellt wurde
 
 
 
