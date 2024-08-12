@@ -155,7 +155,7 @@ und als root User anmelden
 ELF file use Detect It Easy (DIE) (für *.elf)
 Run *.exe
 Upload target file, click open now in scanned all
-see entry point
+see entry point under File Info
 Find Portable Executable (PEiD) Information of Malware Executable File (für *.exe)
 upload file, open header and you see entry point adress
 
