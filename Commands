@@ -9,3 +9,8 @@ nmap -p389 -sV IP/24
 namp -sV -A -p 80 IP/24
 sudo nmap -T4 -Ss -p 139,445 - -script vuln IP/24
 sudo nmap -p 389,445 --open -oG - [host]/CIDR | grep open
+FQDN
+nmap -sC -sV [host]
+Look for DNS Computer Name
+Find FQDN
+nmap -p389 –sV -iL [host] or nmap -p389 –sV [host] (Find the FQDN in a subnet/network)
