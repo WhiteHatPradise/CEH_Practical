@@ -9,6 +9,7 @@ right klick, Follow TCP or HTTP Stream (blue response, red request)
 Export *.txt
 File-->Export Objects-->HTTP-->Content Typ "text/plain"
 File Properties Schreibblock unten links in der Ecke (capture files comments)
+Search String Contrl+F 
 
 NMAP
 
@@ -67,14 +68,24 @@ find . -name NetworkPass.txt
 cat /path/NetworkPass.txt
 
 #007 Stego
-openstego or https://georgeom.net/StegOnline/upload
+> openstego or https://georgeom.net/StegOnline/upload (Text in Image File)
+decrypt
+Extract Data-->input stego file
+set output folder for nessage file
+Extract Data
+
+> Snow (Textfiles)
+cmd im ordner öffnen
+SNOW.exe -C -m "Test" -p "password" Secret.txt Hiddensecret.txt  (encrypt)
+TEXT (Contr+A) Markieren um zu schauen ob Daten in TXT versteckt sind
+SNOW.exe -C -p "password" Hiddensecret.txt (decrypt)
 
 #008 FTP
 nmap -p 21 192.168.178.0/24
 sudo nmap -sS -A -T4 IP/24
 hydra -L user.txt -P pass.txt ftp://192.168.178.1
 ftp 192.168.178.1 and type user and password
-ls dinf . -name credential.txt
+ls find . -name credential.txt
 
 #009 Priv Escalation
 nmap -sV -p 22 192.168.178.0/24
@@ -94,7 +105,8 @@ upload file, open header and you see entry point adress
 
 #011 DDos
 open *.pcapng file
-Statistics IPv4 --> Source and Destination --> Then you can apply the filter
+Statistics --> Conversations --> IPv4 --> Source and Destination --> Then you can apply the filter
+lookung for the most bytes from one destination (Adress A)
 tcp.flags.syn==1 and tcp.flags.ack == 0
 you see high number of packets send to victim ip and the answers
 
