@@ -8,3 +8,4 @@ NMAP
 nmap -p389 -sV IP/24
 namp -sV -A -p 80 IP/24
 sudo nmap -T4 -Ss -p 139,445 - -script vuln IP/24
+sudo nmap -p 389,445 --open -oG - [host]/CIDR | grep open
