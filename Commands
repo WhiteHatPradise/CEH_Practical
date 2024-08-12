@@ -11,8 +11,13 @@ File-->Export Objects-->HTTP-->Content Typ "text/plain"
 File Properties Schreibblock unten links in der Ecke (capture files comments)
 Search String Contrl+F 
 
-NMAP
+Convert TCP
+cc -o convert_tcp convert_tcp.c
+https://github.com/Samsar4/Ethical-Hacking-Labs/blob/master/5-System-Hacking/10-Covert_TCP.md
+for recieving/listening ./convert_tcp -dest <Dest-IP> -source <Source-IP> -source_port 9999 -dest_port 8888 -server -file /path/to/file.txt
+for sending ./convert_tcp -dest <Dest-IP> -source <Source-IP> -source_port 8888 -dest_port 9999 -server -file /path/to/file.txt
 
+NMAP
 ##01 Domain
 nmap -p389 -sV IP/24
 sudo nmap -p 389,445 --open -oG - [host]/CIDR | grep open
@@ -71,7 +76,7 @@ cat /path/NetworkPass.txt
 > openstego or https://georgeom.net/StegOnline/upload (Text in Image File)
 decrypt
 Extract Data-->input stego file
-set output folder for nessage file
+set output folder for message file
 Extract Data
 
 > Snow (Textfiles)
