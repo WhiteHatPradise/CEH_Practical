@@ -224,27 +224,18 @@ aircrack-ng '/home/wireless.cap'
 aircrack-ng -b 6c:24:a6:3e:01:59 -w '/home/wifipass.txt' '/home/wireless.cap'
 now you see the password 
 
-#019 RAT  ~~
+#019 RAT  ~~ (empfohlenm njRAT, ProRat oder Theef)
 nmap -p 9871,6703, 192.168.0.0/24
+theef
 start run client.exe
 insert ip and open port
 click connect go to file explorer and search *.txt
 or use search file in cmd using dir /b/s "*.txt"
+
 
 #020 VeraCrypt  ~~
 Use VeraCrypt to decrypt the Volunme
 Chack password is in one system and file is in one system
 decrypt the hash using hash.com and get password
 open veracrypt and upload the file and give password in and open it 
-
-
-
-
-
-
-
-
-
-
-
 
