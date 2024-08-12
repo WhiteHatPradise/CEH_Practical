@@ -6,7 +6,8 @@ nmap -sn IP/24
 Wireshark
 Extra
 right klick, Follow TCP or HTTP Stream (blue response, red request)
-
+Export *.txt
+File-->Export Objects-->HTTP-->Content Typ "text/plain"
 
 NMAP
 
