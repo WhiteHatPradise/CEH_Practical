@@ -152,11 +152,11 @@ wenn man authorized_keys im .ssh Ordner manipulieren kann
 und als root User anmelden
 
 #010 Malware  ~~
-ELF file use Detect It Easy (DIE)
+ELF file use Detect It Easy (DIE) (für *.elf)
 Run *.exe
 Upload target file, click open now in scanned all
 see entry point
-Find Portable Executable (PE) Information of Malware Executable File
+Find Portable Executable (PEiD) Information of Malware Executable File (für *.exe)
 upload file, open header and you see entry point adress
 
 #011 DDos  ~~
