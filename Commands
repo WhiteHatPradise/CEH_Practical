@@ -3,6 +3,11 @@ sudo arp-scan -local
 netdiscover -i IP
 nmap -sn IP/24
 
+Wireshark
+Extra
+right klick, Follow TCP or HTTP Stream (blue response, red request)
+
+
 NMAP
 
 ##01 Domain
@@ -88,7 +93,7 @@ upload file, open header and you see entry point adress
 #011 DDos
 open *.pcapng file
 Statistics IPv4 --> Source and Destination --> Then you can apply the filter
-tcp.flags.syn == 1 and tcp.flags.ack == 0
+tcp.flags.syn==1 and tcp.flags.ack == 0
 you see high number of packets send to victim ip and the answers
 
 #012 SQL Injection
