@@ -8,6 +8,7 @@ Extra
 right klick, Follow TCP or HTTP Stream (blue response, red request)
 Export *.txt
 File-->Export Objects-->HTTP-->Content Typ "text/plain"
+File Properties Schreibblock unten links in der Ecke (capture files comments)
 
 NMAP
 
