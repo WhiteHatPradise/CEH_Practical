@@ -85,7 +85,7 @@ sudo namp -p 5555 192.168.178.0/24
 adb connect 192.168.178.15:5555
 adb shell
 ls and cd to files
-adb pull /sdcard/scan or adb /sdcard/scan attacker/home/
+adb pull /sdcard/scan or adb /sdcard/scan attacker/home/ or cd sdcard/Notifications/Scan
 ls abd cd scan
 ent *.elf Dateien 
 sha384 *.elf Datei 
