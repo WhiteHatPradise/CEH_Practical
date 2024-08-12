@@ -13,6 +13,10 @@ Es benötigt zusätzlich die Key Length , Start
 VeraCrypt --> Laufwerk auswählen, Mount, Datei auswählen, Passwort wird benötigt 
 Das Passwort bestimmt ob ich in den inneren oder äußeren Container komme
 
+WPScan
+wpscan -h
+wpscan --url http://10.10.14.187/ --enumerate u
+
 Wireshark
 Extra
 right klick, Follow TCP or HTTP Stream (blue response, red request)
